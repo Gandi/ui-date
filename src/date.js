@@ -75,10 +75,6 @@ angular.module('ui.date', [])
         element.datepicker('destroy');
         // Create the new datepicker widget
         element.datepicker(opts);
-        if ( controller ) {
-          // Force a render to override whatever is in the input text box
-          controller.$render();
-        }
       };
       // Watch for changes to the directives options
       scope.$watch(getOptions, initDateWidget, true);
